@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 
 import { Http } from '@angular/http';
 
-import { UserData } from './user-data';
+import { UserData } from './';
 
 
 @Injectable()
 export class ConferenceData {
   data: any;
 
-  constructor(public http: Http, public user: UserData) {}
+  constructor(public http: Http, private user: UserData) { }
 
   load() {
     if (this.data) {
